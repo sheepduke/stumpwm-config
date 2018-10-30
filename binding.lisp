@@ -6,3 +6,4 @@
 (define-key *root-map* (kbd "C-u") "urxvt")
 
 (define-key *top-map* (kbd "s-f") "fullscreen")
+(define-key *top-map* (kbd "s-l") "exec slock")

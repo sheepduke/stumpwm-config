@@ -13,6 +13,10 @@
   (merge-pathnames ".stumpwm.d/"
                    (user-homedir-pathname)))
 
+(defun quicklisp-dir ()
+  (merge-pathnames "quicklisp/"
+                   (conf-dir)))
+
 (defun conf-file-path (filename)
   (merge-pathnames filename
                     (conf-dir)))
@@ -26,20 +30,22 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Install or setup quicklisp.
-#-quicklisp
-(let ((quicklisp-setup (conf-file-path "quicklisp/setup.lisp")))
-  (if (probe-file quicklisp-setup)
-      (load-file quicklisp-setup)
-      (load-file "quicklisp-install.lisp")))
+;; #-quicklisp
+;; (let ((quicklisp-setup (conf-file-path "quicklisp/setup.lisp")))
+;;   (unless (probe-file quicklisp-setup)
+;;     (load-file "quicklisp.lisp")
+;;     (funcall (find-symbol "INSTALL" "QUICKLISP-QUICKSTART")
+;;              :path (quicklisp-dir)))
+;;   (load-file quicklisp-setup))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Swank                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Start swank server.
-(ql:quickload :swank)
-(swank-loader:init)
-(swank:create-server :dont-close t)
+;; ;; Start swank server.
+;; (ql:quickload :swank)
+;; (swank-loader:init)
+;; (swank:create-server :dont-close t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Setup                                ;;
