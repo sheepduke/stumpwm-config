@@ -1,0 +1,5 @@
+* How to install this repo
+
+1. Clone this repo to anywhere on your machine.
+
+2. Make a symbolic link from this repo to ~$HOME/.stumpwm.d/~.
