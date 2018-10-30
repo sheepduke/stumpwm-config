@@ -1,11 +1,14 @@
 (in-package :stumpwm)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                          Applications                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defcommand firefox () ()
   (run-or-raise "firefox" '(:class "Firefox")))
 
 (defcommand urxvt () ()
   (run-or-raise "urxvt" '(:class "URxvt")))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Volume                               ;;
@@ -23,7 +26,7 @@
      (format nil "pactl set-sink-volume ~A ~A" sink percent))))
 
 (defcommand volume-set (percent)
-    ((:number "Enter the percentage"))
+    ((:number "Enter the percentage: "))
   "Raise the volume for all sinks."
   (volume-add
    (format nil "~A~A%"

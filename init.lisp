@@ -55,6 +55,7 @@
 (load-file "startup.lisp")
 (load-file "function.lisp")
 (load-file "binding.lisp")
+(load-file "hook.lisp")
 (load-file "startup.lisp")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
