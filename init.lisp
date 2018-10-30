@@ -46,6 +46,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load-file "env.lisp")
+(load-file "startup.lisp")
+(load-file "function.lisp")
+(load-file "binding.lisp")
+(load-file "startup.lisp")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;; Global variable  ;;;;;;;;;;;;;;;;;;;;;;;;
