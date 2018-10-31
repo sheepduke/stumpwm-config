@@ -1,3 +1,7 @@
+;; hook
+;;
+;; Hook functions.
+
 (in-package :stumpwm)
 
 (defun new-window-activate-fullscreen (window)

@@ -1,3 +1,7 @@
+;; function
+;;
+;; Common functions and commands.
+
 (in-package :stumpwm)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,3 +1,7 @@
+;; env
+;;
+;; Set environment variables.
+
 (in-package :stumpwm)
 
 (setf (getenv "XIM") "ibus")

@@ -1,3 +1,7 @@
+;; startup
+;;
+;; Starts some programs.
+
 (in-package :stumpwm)
 
 (run-shell-command "ibus-daemon -rdx")

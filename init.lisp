@@ -39,4 +39,3 @@
 (load-file "binding.lisp")
 (load-file "hook.lisp")
 (load-file "rule.lisp")
-(load-file "startup.lisp")
