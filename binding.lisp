@@ -24,11 +24,13 @@
 ;;                              Windows                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Emacs style window splitting bindings.
-(define-key *root-map* (kbd "3") "hsplit")
-(define-key *root-map* (kbd "2") "vsplit")
-(define-key *root-map* (kbd "1") "only")
-(define-key *root-map* (kbd "0") "remove-split")
+(defvar *split-map* (make-sparse-keymap))
+(define-key *split-map* (kbd "2") "hsplit")
+(define-key *split-map* (kbd "3") "vsplit")
+(define-key *split-map* (kbd "1") "only")
+(define-key *split-map* (kbd "0") "remove-split")
+
+(define-key *root-map* (kbd "s") '*split-map*)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                               Focus                              ;;
