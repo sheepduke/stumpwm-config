@@ -7,6 +7,7 @@
 3. Install ~stumpwm~ via Quicklisp.
 
     ~$ ros run~
+
     ~* (ql:quickload :stumpwm)~
 
 4. Make a symbolic link from this repo to ~$HOME/.stumpwm.d/~.
