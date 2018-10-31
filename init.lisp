@@ -29,6 +29,10 @@
 ;;                             Loader                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Load modules.
+(load-module "globalwindows")
+
+;; Load configuration files.
 (load-file "env.lisp")
 (load-file "startup.lisp")
 (load-file "function.lisp")
