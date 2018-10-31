@@ -1,5 +1,40 @@
-* How to install this repo
+* Installation
 
 1. Clone this repo to anywhere on your machine.
 
-2. Make a symbolic link from this repo to ~$HOME/.stumpwm.d/~.
+2. Make sure you have ~roswell~ installed and initialized.
+
+3. Install ~stumpwm~ via Quicklisp.
+
+    ~$ ros run~
+    ~* (ql:quickload :stumpwm)~
+
+4. Make a symbolic link from this repo to ~$HOME/.stumpwm.d/~.
+
+5. Run command ~echo "exec ~/.stumpwm.d/stumpwm.ros" >> ~/.xinitrc~.
+
+* Directories and files
+
+** env.lisp
+
+Environment variables.
+
+** startup.lisp
+
+Start some programs.
+
+** function.lisp
+
+Common functions.
+
+** binding.lisp
+
+Key bindings.
+
+** hook.lisp
+
+Hook functions.
+
+** rule.lisp
+
+Rules for window placement.

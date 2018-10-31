@@ -5,4 +5,6 @@
 (in-package :stumpwm)
 
 (define-frame-preference "firefox"
-    (0 t t :class "Firefox"))
+    (0 t t
+       :class "Firefox"
+       :create t))
