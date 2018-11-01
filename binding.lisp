@@ -40,9 +40,8 @@
 (define-key *root-map* (kbd "C-p") "prev")
 (define-key *root-map* (kbd "C-n") "next")
 
-(define-key *root-map* (kbd "C-w") "windowlist (%3n) [%c] %s %t")
+(define-key *root-map* (kbd "C-w") "global-windowlist (%3n) [%c] %s %t")
 (define-key *root-map* (kbd "w") "windowlist (%3n) [%c] %s %t")
-(define-key *root-map* (kbd "W") "global-windowlist (%3n) [%c] %s %t")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                               Focus                              ;;
