@@ -64,3 +64,10 @@
 (define-key *top-map* (kbd "s-Down") "volume-set -10")
 (define-key *top-map* (kbd "s-Left") "volume-set -2")
 (define-key *top-map* (kbd "s-Right") "volume-set 2")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                          Screenshot                              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define-key *top-map* (kbd "SunPrint_Screen") "take-screenshot")
+(define-key *top-map* (kbd "S-SunPrint_Screen") "take-screenshot-window")

@@ -15,6 +15,34 @@
   (run-or-raise "urxvt" '(:class "URxvt")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                             Utility                              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun now ()
+  "Return the current local timestamp as string."
+  (local-time:format-timestring
+   nil (local-time:now)
+   :format '((:year 4) "-" (:month 2) "-" (:day 2) "_"
+             (:hour 2) "." (:min 2) "." (:sec 2))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                           Screenshot                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun screenshot-path ()
+  "Return the file path of screen shot."
+  (uiop:merge-pathnames* (str:concat (now) ".png") *screenshot-dir*))
+
+(defcommand take-screenshot () ()
+  "Take screenshot without asking for file name."
+  (screenshot:screenshot (screenshot-path)))
+
+(defcommand take-screenshot-selection () ()
+  "Take screenshot with selection."
+  ;; TODO
+  )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Volume                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
