@@ -25,22 +25,35 @@
    :format '((:year 4) "-" (:month 2) "-" (:day 2) "_"
              (:hour 2) "." (:min 2) "." (:sec 2))))
 
+(defun command-exists-p (shell-command)
+  "Return T if given SHELL-COMMAND is in the search path."
+  (> (length (run-shell-command (format nil "which ~A" shell-command) t)) 0))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                           Screenshot                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun screenshot-path ()
   "Return the file path of screen shot."
-  (uiop:merge-pathnames* (str:concat (now) ".png") *screenshot-dir*))
+  (uiop:merge-pathnames* (now) *screenshot-dir*))
 
 (defcommand take-screenshot () ()
   "Take screenshot without asking for file name."
-  (screenshot:screenshot (screenshot-path)))
+  (cond
+    ((command-exists-p "maim")
+     (run-shell-command
+      (format nil "maim --format jpg ~A.jpg" (screenshot-path))))
+    (t
+     (screenshot:screenshot (screenshot-path)))))
 
 (defcommand take-screenshot-selection () ()
   "Take screenshot with selection."
-  ;; TODO
-  )
+  (cond
+    ((command-exists-p "maim")
+     (run-shell-command
+      (format nil "maim --format jpg -s ~A.jpg" (screenshot-path))))
+    (t
+     (message "Not supported!"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Volume                               ;;

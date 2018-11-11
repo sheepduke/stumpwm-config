@@ -38,7 +38,6 @@
 (load-file "env.lisp")
 (load-file "startup.lisp")
 (load-file "function.lisp")
-(load-file "screenshot.lisp")
 (load-file "binding.lisp")
 (load-file "hook.lisp")
-(load-file "rule.lisp")
+(load-file "window.lisp")

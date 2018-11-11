@@ -15,48 +15,6 @@
 (define-key *top-map* (kbd "C-s-l") "exec slock")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                              Groups                              ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(define-key *top-map* (kbd "s-1") "gselect 1")
-(define-key *top-map* (kbd "s-2") "gselect 2")
-
-(define-key *root-map* (kbd "p") "gprev")
-(define-key *root-map* (kbd "P") "gprev-with-window")
-(define-key *root-map* (kbd "n") "gnext")
-(define-key *root-map* (kbd "N") "gnext-with-window")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                              Windows                             ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(defvar *split-map* (make-sparse-keymap))
-(define-key *root-map* (kbd "s") '*split-map*)
-(define-key *split-map* (kbd "2") "hsplit")
-(define-key *split-map* (kbd "3") "vsplit")
-(define-key *split-map* (kbd "1") "only")
-(define-key *split-map* (kbd "0") "remove-split")
-
-(define-key *root-map* (kbd "C-p") "prev")
-(define-key *root-map* (kbd "C-n") "next")
-
-(define-key *root-map* (kbd "C-w") "global-windowlist (%3n) [%c] %s %t")
-(define-key *root-map* (kbd "w") "windowlist (%3n) [%c] %s %t")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                               Focus                              ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(define-key *top-map* (kbd "s-h") "move-focus left")
-(define-key *top-map* (kbd "s-l") "move-focus right")
-(define-key *top-map* (kbd "s-p") "move-focus up")
-(define-key *top-map* (kbd "s-n") "move-focus down")
-
-
-(define-key *top-map* (kbd "s-f") "fullscreen")
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Volume                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -70,4 +28,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define-key *top-map* (kbd "SunPrint_Screen") "take-screenshot")
-(define-key *top-map* (kbd "S-SunPrint_Screen") "take-screenshot-window")
+(define-key *top-map* (kbd "Sys_Req") "take-screenshot-selection")
