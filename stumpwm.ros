@@ -5,8 +5,14 @@ exec ros -Q -- $0 "$@"
 |#
 (progn ;;init forms
   (ros:ensure-asdf)
-  #+quicklisp (ql:quickload '(stumpwm swank str local-time zpng) :silent t)
-  )
+  #+quicklisp
+  (ql:quickload
+   '(stumpwm swank str local-time
+     zpng
+     ;; for set-font
+     clx-truetype
+     )
+   :silent t))
 
 (defpackage :ros.script.stumpwm.3749863733
   (:use :cl))

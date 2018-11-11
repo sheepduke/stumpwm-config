@@ -18,9 +18,8 @@
                    (conf-dir)))
 
 (defun conf-file-path (filename)
-  (merge-pathnames filename
-                    (conf-dir)))
-
+  (merge-pathnames (str:concat "src/" filename)
+                   (conf-dir)))
 
 (defun load-file (filename)
   (load (conf-file-path filename)))
@@ -31,13 +30,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Load modules.
-(load-module "globalwindows")
 (load-module "screenshot")
 
 ;; Load configuration files.
-(load-file "env.lisp")
+(load-file "global.lisp")
 (load-file "startup.lisp")
 (load-file "function.lisp")
 (load-file "binding.lisp")
 (load-file "hook.lisp")
 (load-file "window.lisp")
+(load-file "screenshot.lisp")
+(load-file "display.lisp")
