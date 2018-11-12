@@ -5,7 +5,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load-module "ttf-fonts")
-(xft:cache-font-file "fonts/wqy-MicroHei.ttf")
+
+(xft:cache-font-file
+ (merge-pathnames "fonts/wqy-MicroHei.ttf"
+                  (conf-dir)))
 
 (handler-case (set-font
                (make-instance 'xft:font
