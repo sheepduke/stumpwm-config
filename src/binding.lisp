@@ -22,3 +22,6 @@
 (define-key *top-map* (kbd "s-Down") "volume-set -10")
 (define-key *top-map* (kbd "s-Left") "volume-set -2")
 (define-key *top-map* (kbd "s-Right") "volume-set 2")
+
+(define-key *top-map* (kbd "XF86AudioRaiseVolume") "volume-set 2")
+(define-key *top-map* (kbd "XF86AudioRaiseVolume") "volume-set -2")
