@@ -8,7 +8,7 @@
 
 (xft:cache-font-file
  (merge-pathnames "fonts/wqy-MicroHei.ttf"
-                  (conf-dir)))
+                  *root-dir*))
 
 (handler-case (set-font
                (make-instance 'xft:font
