@@ -9,12 +9,12 @@
 ;;                              Util                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defparameter *root-dir*
+(defparameter +root-dir+
   (merge-pathnames ".stumpwm.d/" (user-homedir-pathname))
   "Directory of StumpWM configuration.")
 
-(defparameter *conf-dir*
-  (merge-pathnames "src/" *root-dir*))
+(defparameter +conf-dir+
+  (merge-pathnames "src/" +root-dir+))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Loader                               ;;
@@ -25,4 +25,4 @@
 
 ;; Load configuration files.
 (mapcar #'load
-        (uiop:directory-files *conf-dir* "*.lisp"))
+        (uiop:directory-files +conf-dir+ "*.lisp"))
