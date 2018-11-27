@@ -2,6 +2,7 @@
 ;;
 ;; Stores functions related to screenshot.
 
+(in-package :stumpwm)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                            Commands                              ;;
@@ -9,7 +10,7 @@
 
 (defun screenshot-path ()
   "Return the file path of screen shot."
-  (uiop:merge-pathnames* (now) *screenshot-dir*))
+  (uiop:merge-pathnames* (now) +screenshot-dir+))
 
 (defcommand take-screenshot () ()
   "Take screenshot without asking for file name."
@@ -27,7 +28,7 @@
      (run-shell-command
       (format nil "maim --format jpg -s ~A.jpg" (screenshot-path))))
     (t
-     (message "Not supported!"))))
+     (message "Not supported! Please install maim first."))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                            Bindings                              ;;

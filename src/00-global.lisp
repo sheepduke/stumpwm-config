@@ -19,6 +19,6 @@
 ;;                              Global                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defvar *screenshot-dir*
+(defparameter +screenshot-dir+
   (uiop:merge-pathnames* "pictures/screenshots/" (user-homedir-pathname))
   "Directory of screenshots")
