@@ -88,7 +88,8 @@
 (defcommand restore-window-rules () ()
   "Restore window rules and delete rule file."
   (restore-window-placement-rules *rule-file*)
-  (delete-file *rule-file*))
+  (delete-file *rule-file*)
+  (message "Rule restored."))
 
 (defcommand forget-window-rules () ()
   "Restore rules to file and forget window rules."
