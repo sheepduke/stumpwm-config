@@ -22,3 +22,6 @@
 (defparameter +screenshot-dir+
   (uiop:merge-pathnames* "pictures/screenshots/" (user-homedir-pathname))
   "Directory of screenshots")
+
+(defparameter *rule-file*
+  (merge-pathnames "window-rules" (uiop:temporary-directory)))

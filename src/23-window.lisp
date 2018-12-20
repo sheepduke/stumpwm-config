@@ -82,3 +82,20 @@
     (0 t t
        :class "Firefox"
        :create t))
+
+(dump-window-placement-rules *rule-file*)
+
+(defcommand restore-window-rules () ()
+  "Restore window rules and delete rule file."
+  (restore-window-placement-rules *rule-file*)
+  (delete-file *rule-file*))
+
+(defcommand forget-window-rules () ()
+  "Restore rules to file and forget window rules."
+  (dump-window-placement-rules *rule-file*)
+  (forget))
+
+(defvar *rule-map* (make-sparse-keymap))
+(define-key *root-map* (kbd "r") *rule-map*)
+(define-key *rule-map* (kbd "f") "forget-window-rules")
+(define-key *rule-map* (kbd "r") "restore-window-rules")
