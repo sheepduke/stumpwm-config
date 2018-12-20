@@ -14,6 +14,8 @@
 (define-key *root-map* (kbd "C-u") "urxvt")
 (define-key *top-map* (kbd "C-s-l") "exec slock")
 
+(define-key *root-map* (kbd "C-m") "mode-line")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Volume                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
