@@ -35,7 +35,7 @@
 
 (defun volume-get-sinks ()
   "Return a list containing all available sinks."
-  (let ((result (run-shell-command "pactl list short sinks | ag -o '^[0-9]+'" t)))
+  (let ((result (run-shell-command "pactl list short sinks | grep -Po '^[0-9]+'" t)))
     (str:split #\newline result)))
 
 (defun volume-add (percent)
