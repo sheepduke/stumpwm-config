@@ -78,6 +78,22 @@
 ;;                               Rule                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Defines rules for auto full-screen.
+(defvar *fullscreen-classes* '()
+  "The list of window classes that shall be full-screen.")
+
+(push "URxvt" *fullscreen-classes*)
+(push "Emacs" *fullscreen-classes*)
+
+(defun enable-fullscreen-by-class (window)
+  "Enable fullscreen by window class."
+  (when (member (window-class window) *fullscreen-classes*
+                :test #'string-equal)
+    (activate-fullscreen window)))
+
+(push 'enable-fullscreen-by-class *new-window-hook*)
+
+;; Place Firefox in second frame.
 (define-frame-preference "2"
     (0 t t
        :class "Firefox"

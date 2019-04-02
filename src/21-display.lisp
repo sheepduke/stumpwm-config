@@ -14,7 +14,7 @@
                (make-instance 'xft:font
                               :family "WenQuanYi Micro Hei"
                               :subfamily "Regular"
-                              :size 12))
+                              :size 14))
   (error () (message "Font not found.")))
 
 
