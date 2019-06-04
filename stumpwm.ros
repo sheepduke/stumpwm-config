@@ -7,7 +7,7 @@ exec ros -Q -- $0 "$@"
   (ros:ensure-asdf)
   #+quicklisp
   (ql:quickload
-   '(stumpwm slynk str local-time
+   '(stumpwm swank str local-time
      zpng
      ;; for set-font
      clx-truetype
@@ -20,8 +20,8 @@ exec ros -Q -- $0 "$@"
 
 (defun main (&rest argv)
   (declare (ignorable argv))
-  ;; (swank-loader:init)
-  ;; (swank:create-server :dont-close t)
-  (slynk:create-server :dont-close t)
+  (swank-loader:init)
+  (swank:create-server :dont-close t)
+  ;; (slynk:create-server :dont-close t)
   (stumpwm:stumpwm))
 ;;; vim: set ft=lisp lisp:
