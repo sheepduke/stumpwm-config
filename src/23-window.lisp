@@ -82,6 +82,7 @@
 (defvar *fullscreen-classes* '()
   "The list of window classes that shall be full-screen.")
 
+(push "Firefox" *fullscreen-classes*)
 (push "URxvt" *fullscreen-classes*)
 (push "Emacs" *fullscreen-classes*)
 
