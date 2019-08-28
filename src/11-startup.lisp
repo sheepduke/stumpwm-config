@@ -10,6 +10,12 @@
 (run-shell-command "aria2c -D --conf-path=~/.aria2.conf")
 (run-shell-command "unclutter -display $DISPLAY -idle 1")
 (run-shell-command "setxkbmap -option ctrl:nocaps")
+(run-shell-command "firefox")
+(run-shell-command "keepassxc")
+(run-shell-command "telegram-desktop")
+(run-shell-command "slack")
+(run-shell-command "emacs")
+(run-shell-command "urxvt")
 
 (defun startup-welcome ()
   "Show welcome message."

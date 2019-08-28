@@ -94,11 +94,34 @@
 
 (push 'enable-fullscreen-by-class *new-window-hook*)
 
-;; Place Firefox in second frame.
+(define-frame-preference "1"
+  (0 t t
+     :class "Emacs"
+     :restore t)
+  (0 t t
+     :class "URxvt"
+     :restore t))
+
 (define-frame-preference "2"
-    (0 t t
-       :class "Firefox"
-       :create t))
+  (0 t t
+     :class "firefox"
+     :restore t)
+  (0 t t
+     :class "Firefox"
+     :restore t))
+
+(define-frame-preference "8"
+  (0 t t
+     :class "TelegramDesktop"
+     :restore t)
+  (0 t t
+     :class "Slack"
+     :restore t))
+
+(define-frame-preference "7"
+  (0 t t
+     :class "keepassxc"
+     :restore t))
 
 (dump-window-placement-rules *rule-file*)
 
