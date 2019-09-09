@@ -108,6 +108,9 @@
      :restore t)
   (0 t t
      :class "Firefox"
+     :restore t)
+  (0 t t
+     :class "Chromium"
      :restore t))
 
 (define-frame-preference "8"
