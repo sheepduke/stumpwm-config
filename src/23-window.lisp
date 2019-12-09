@@ -83,6 +83,7 @@
   "The list of window classes that shall be full-screen.")
 
 (push "Firefox" *fullscreen-classes*)
+(push "Chromium" *fullscreen-classes*)
 (push "URxvt" *fullscreen-classes*)
 (push "Emacs" *fullscreen-classes*)
 
@@ -97,6 +98,9 @@
 (define-frame-preference "1"
   (0 t t
      :class "Emacs"
+     :restore t)
+  (0 t t
+     :class "emacs"
      :restore t)
   (0 t t
      :class "URxvt"
