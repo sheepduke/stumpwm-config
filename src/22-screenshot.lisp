@@ -17,7 +17,7 @@
   (cond
     ((command-exists-p "maim")
      (run-shell-command
-      (format nil "maim --format jpg ~A.jpg" (screenshot-path))))
+      (format nil "maim -m 10 --format jpg ~A.jpg" (screenshot-path))))
     (t
      (screenshot:screenshot (screenshot-path)))))
 
@@ -26,7 +26,7 @@
   (cond
     ((command-exists-p "maim")
      (run-shell-command
-      (format nil "maim --format jpg -s ~A.jpg" (screenshot-path))))
+      (format nil "maim -m 10 --format jpg -s ~A.jpg" (screenshot-path))))
     (t
      (message "Not supported! Please install maim first."))))
 
