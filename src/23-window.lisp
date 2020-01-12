@@ -117,6 +117,14 @@
      :class "Chromium"
      :restore t))
 
+(define-frame-preference "7"
+  (0 t t
+     :class "keepassxc"
+     :restore t))
+  (0 t t
+     :class "KeePassXC"
+     :create t))
+
 (define-frame-preference "8"
   (0 t t
      :class "TelegramDesktop"
@@ -125,10 +133,10 @@
      :class "Slack"
      :restore t))
 
-(define-frame-preference "7"
+(define-frame-preference "8"
   (0 t t
-     :class "keepassxc"
-     :restore t))
+     :class "Wine"
+     :create t))
 
 (dump-window-placement-rules *rule-file*)
 
