@@ -120,7 +120,7 @@
 (define-frame-preference "7"
   (0 t t
      :class "keepassxc"
-     :restore t))
+     :restore t)
   (0 t t
      :class "KeePassXC"
      :create t))
