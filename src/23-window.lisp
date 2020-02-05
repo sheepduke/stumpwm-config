@@ -131,9 +131,7 @@
      :restore t)
   (0 t t
      :class "Slack"
-     :restore t))
-
-(define-frame-preference "8"
+     :restore t)
   (0 t t
      :class "Wine"
      :create t))
