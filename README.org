@@ -1,3 +1,14 @@
+*Archiving Note*
+
+This repository has been archived on 2020-02-05.
+
+The author (me) no longer uses StumpWM. I have started to use XMonad (written
+in Haskell) and am pretty happy with it.
+
+I have encountered several crashes of StumpWM on different machines. Although
+I really appreciate the live-hacking nature of StumpWM, XMonad provides a more
+stable user experience.
+
 * Installation
 
 1. Clone this repo to anywhere on your machine.
